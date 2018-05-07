@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment name="AmbienteCarToy">
+    <EnvironmentState name="EstadoAmbiente">
+      <DataStructure name="planoCasa" type="Other"/>
+      <DataStructure name="posicionAgente" type="Other"/>
+      <DataStructure name="llamada" type="Other"/>
+      <DataStructure name="listaObstaculos" type="Other"/>
+      <DataStructure name="listaObstaculosTemp" type="Other"/>
+    </EnvironmentState>
+  </Environment>
+  <Agent name="AgenteCarToy">
+    <Strategy xsi:type="idemia:Search"/>
+    <Goal name="ObjetivoAgenteCarToy" value=" posicion.equals(lugarLlamada)"/>
+    <AgentState name="EstadoAgenteCarToy">
+      <DataStructure name="planoCasa" type="Other"/>
+      <DataStructure name="posicionAgente" type="Other"/>
+      <DataStructure name="posicionLlamada" type="Other"/>
+      <DataStructure name="listaInfoExtra" type="Other"/>
+      <DataStructure name="listaObstaculos" type="Other"/>
+      <DataStructure name="listaObstaculosTemp" type="Other"/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrSuroeste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrEste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrNoroeste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrNoreste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrSur"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrSureste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrOeste"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrNorte"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="llamada"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="agua"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="basura"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="ropa"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="nueva_info_extra"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="nuevo_obst_temp"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="corre_obstaculo"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="abre_puerta"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="cierra_puerta"/>
+</idemia:AgentModel>
